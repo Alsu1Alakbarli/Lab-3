@@ -1,9 +1,9 @@
+package Exercise1;
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class MinMaxArray {
 
-    // a. Method to calculate minimum element
+    // a. Define a (a) method(s) to calculate minimum of given elements.
     public static int findMin(int[] arr) {
         int min = arr[0];
         for (int num : arr) {
@@ -12,7 +12,7 @@ public class MinMaxArray {
         return min;
     }
 
-    // b. Method to calculate maximum element
+    // Define a (a) method(s) to calculate maximum of given elements.
     public static int findMax(int[] arr) {
         int max = arr[0];
         for (int num : arr) {
@@ -21,7 +21,7 @@ public class MinMaxArray {
         return max;
     }
 
-    // c. Method to return both min and max at the same time
+    // Can you define another method that can calculate and return both at the same time?
     public static int[] findMinMax(int[] arr) {
         int min = arr[0], max = arr[0];
         for (int num : arr) {
@@ -32,7 +32,7 @@ public class MinMaxArray {
     }
 
     public static void main(String[] args) {
-        // i. Take input from command line arguments
+        // i. Take an array from command line and find the maximum and minimum elements of the given array
         if (args.length > 0) {
             int[] commandLineArray = new int[args.length];
             for (int i = 0; i < args.length; i++) {
@@ -43,7 +43,7 @@ public class MinMaxArray {
             System.out.println("Maximum: " + findMax(commandLineArray));
         }
 
-        // ii. Take input from user using Scanner
+        // ii. Do the same for an array entered by using a Scanner object.
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of elements: ");
         int n = sc.nextInt();
